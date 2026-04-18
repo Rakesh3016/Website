@@ -12,6 +12,15 @@
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function () {
+        const redirectPath = sessionStorage.getItem("redirectPath");
+        if (redirectPath) {
+          sessionStorage.removeItem("redirectPath");
+          history.replaceState(null, "", redirectPath);
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="/assets/index-Bmoo972n.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-Ce93vD6D.css">
   </head>
